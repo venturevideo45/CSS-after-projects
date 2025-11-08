@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cascading Effects in CSS</title>
+
+  <!-- External CSS (lowest priority) -->
+  <style>
+    /* External style (simulated here) */
+    p {
+      color: blue;
+      font-size: 30px;
+    }
+
+    .highlight {
+      color: green;
+    }
+
+    #special {
+      color: orange;
+    }
+
+    div p {
+      background-color: rgb(49, 161, 11);
+    }
+  </style>
+
+  <!-- Internal CSS (overrides external) -->
+  <style>
+    p {
+      color: red; /* Overrides external p color (blue) */
+    }
+    .highlight {
+      font-weight: bold; /* Adds new rule */
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style="color: purple;">CASCADING EFFECT</h1> <!-- Inline style wins -->
+
+  <p>I THINK THIS TEXT IS RED</p>
+
+  <p class="highlight">BY USING CLASS I HAVE DONE THIS</p>
+
+  <p id="special" class="highlight">
+   ID IS MORE IMPORTANT THAN THE CLASS
+  </p>
+
+  <div>
+    <p style="color: brown;">THIS TEXT IS BROWN WHICH HAS A GREEN HIGHLIGHT</p>
+  </div>
+
+  <p></p>
+</body>
+</html>
