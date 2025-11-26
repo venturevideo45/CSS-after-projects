@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Positioning Demo</title>
+
+  <style>
+    .static-box {
+      position: static;
+      background: lightgray;
+      padding: 10px;
+      margin-bottom: 10px;
+      width: 100px;
+      height: 100px;
+    }
+
+    .relative-box {
+      position: relative;
+      background: lightgreen;
+      padding: 10px;
+      top: 10px;
+      left: 20px;
+      margin-bottom: 20px;
+      width: 340.15748031px;
+      height: 37.795275591px;
+    }
+
+    .absolute-container {
+      position: relative;
+      border: 2px solid black;
+      height: 150px;
+      margin-bottom: 20px;
+    }
+
+    .absolute-box {
+      position: absolute;
+      background: lightskyblue;
+      top: 20px;
+      right: 20px;
+      padding: 10px;
+    }
+
+    .fixed-box {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background: orange;
+      padding: 10px;
+    }
+
+    .sticky-box {
+      position: sticky;
+      top: 0;
+      background: pink;
+      padding: 10px;
+      border: 1px solid black;
+      width: 340.15748031px;
+      height: 37.795275591px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>CSS Positioning Examples</h2>
+
+
+  <div class="static-box">
+    This is STATIC (default positioning).
+  </div>
+
+
+  <div class="relative-box">
+    This is RELATIVE (moved from original position).
+  </div>
+
+
+  <div class="absolute-container">
+    <p>This is the parent container (relative).</p>
+
+    <div class="absolute-box">
+      ABSOLUTE (positioned inside the container)
+    </div>
+  </div>
+
+
+  <div class="sticky-box">
+    I am STICKY (I stick to the top while scrolling)
+  </div>
+
+  <p>Scroll down to see the sticky effect.
+  </p>
+  <p style="height:900px;"></p>
+
+
+  <div class="fixed-box">
+    I am FIXED (always in bottom-right)
+  </div>
+
+</body>
+</html>
